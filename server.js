@@ -30,11 +30,11 @@ app.use("/api/v1/transactions",require("./routes/transactionRoute"));
 //static files
 app.use(express.static(path.join(__dirname,"./client/dist")))
 app.get('*',function(req,res){
-   res,sendFile(path.join(__dirname,"./client/dst/index.html")) 
+   res.sendFile(path.join(__dirname,"./client/dist/index.html")) 
 })
 
 //port
-const PORT = 8080 || process.env.PORT;
+const PORT =  process.env.PORT || 8080;
 
 //listen server
 app.listen(PORT, () =>{
