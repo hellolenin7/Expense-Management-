@@ -1,0 +1,75 @@
+body, .ant-layout {
+  background: linear-gradient(135deg, #f0f4f8, #d9e2ec);
+  min-height: 100vh;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+
+.filters {
+  border: 1px solid #ccc; 
+  padding: 20px 25px;
+  margin: 22px 0; 
+  border-radius: 12px;
+  background: linear-gradient(145deg, #ffffff, #f7f7f7);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.12); 
+  transition: all 0.3s ease;
+}
+
+
+.filters h6 {
+  font-size: 15px;
+  font-weight: 600;
+  margin-bottom: 8px;
+  color: #222; 
+}
+
+.filters .ant-select,
+.filters .ant-picker,
+.filters button {
+  margin-top: 8px;
+}
+
+
+.active-icon {
+  color: #1890ff;
+}
+
+.mx-2 {
+  transition: all 0.3s ease;
+}
+
+.mx-2:hover {
+  color: #40a9ff;
+  text-shadow: 0 0 8px rgba(24, 144, 255, 0.6);
+  transform: scale(1.1);
+}
+
+
+.switch-icons {
+  display: flex;
+  gap: 25px; 
+  margin-top: 15px;
+  align-items: center;
+  justify-content: center;
+
+  border: 1.5px solid #ddd;  
+  border-radius: 10px;       
+  padding: 12px 25px;         
+  background-color: #fff;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05); 
+}
+
+.switch-icons .anticon {
+  font-size: 24px;  
+  cursor: pointer;
+  transition: color 0.3s ease, transform 0.2s ease;
+}
+
+.switch-icons .anticon:hover {
+  color: #1890ff;
+  transform: scale(1.15);
+}
+
+.switch-icons .active-icon {
+  color: #1890ff;
+}

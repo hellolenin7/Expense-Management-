@@ -3,6 +3,9 @@ import {Form, Input, message, Button} from 'antd';
 import {Link,useNavigate} from 'react-router-dom';
 import axios from 'axios';
 import Spinner from '../components/Spinner';
+import "../styles/RegisterPage.css";
+
+
 const Register= () => {
     const navigate = useNavigate();
     const [loading,setLoading] = useState(false);
@@ -36,20 +39,22 @@ useEffect(()=>{
     return(
         <div className= "register-page">
             {loading && <Spinner />}
-           <Form layout="vertical" onFinish={submitHandler}>
-            <h1>Register Form</h1>
+           <Form  className="register-form" layout="vertical" onFinish={submitHandler}>
+            <h2>Register Form</h2>
             <Form.Item label="Name" name="name">
-                <Input/>
+                <Input type="text" required />
             </Form.Item>
              <Form.Item label="Email" name="email">
-                <Input type="email"/>
+                <Input type="email" required/>
             </Form.Item>
              <Form.Item label="Password" name="password">
-                <Input type="password"/>
+                <Input type="password" required/>
             </Form.Item>
             <div className='d-flex justify-content-between'>
                 <Link to="/login">Already Register ? Click Here to login</Link>
                 <Button type="primary" htmlType="submit">Register</Button>
+               
+
             </div>
            </Form>
 

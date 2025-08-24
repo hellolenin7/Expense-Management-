@@ -3,9 +3,12 @@ import {Form,Input,message,Button} from 'antd';
 import {Link,useNavigate} from 'react-router-dom'
 import axios from 'axios'
 import Spinner from '../components/Spinner';
+import "../styles/Loginpage.css";
+
+
 const Login= () => {
-    const navigate = useNavigate();
     const [loading,setLoading] = useState(false);
+    const navigate = useNavigate();
      //from submit
     const submitHandler = async (values) => {
   try {
@@ -14,7 +17,7 @@ const Login= () => {
     setLoading(false);
 
     if (data.success) {
-      message.success(data.message); // "Login successful"
+      message.success(data.message); 
       localStorage.setItem('user', JSON.stringify({...data.user,password:""}));
       navigate('/');
     } else {
@@ -33,27 +36,35 @@ useEffect(()=>{
   }
 },[navigate]);
 
-    return(
-        <>
-       <div className= "register-page">
-        {loading && <Spinner /> }
-                  <Form layout="vertical" onFinish={submitHandler}>
-                   <h1>Login Form</h1>
-                    <Form.Item label="Email" name="email">
-                       <Input type="email"/>
-                   </Form.Item>
-                    <Form.Item label="Password" name="password">
-                       <Input type="password"/>
-                   </Form.Item>
-                   <div className='d-flex justify-content-between'>
-                       <Link to="/register">Not a User ? Click Here to Register</Link>
-                       <Button type="primary" htmlType="submit">Login</Button>
+   return (
+  <>
+    <div className="login-page">
+      {loading && <Spinner />}
 
-                   </div>
-                  </Form>
-       
-               </div>
-               </>
-    )
+      {/* Page Heading */}
+      <h1 className="app-title">Expense Management</h1>
+
+      {/* Login Card */}
+      <div className="login-form">
+        <Form layout="vertical" onFinish={submitHandler}>
+          <h2>Login Form</h2>
+          <Form.Item label="Email" name="email">
+            <Input type="email" required />
+          </Form.Item>
+          <Form.Item label="Password" name="password">
+            <Input type="password" required />
+          </Form.Item>
+          <div className="d-flex justify-content-between">
+            <Link to="/register">Not a User ? Click Here to Register</Link>
+            <Button type="primary" htmlType="submit">
+              Login
+            </Button>
+          </div>
+        </Form>
+      </div>
+    </div>
+  </>
+);
+
 }
-export default  Login
+export default  Login;

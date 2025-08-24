@@ -1,0 +1,58 @@
+.login-page {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+
+  background: url("https://images.unsplash.com/photo-1567427017947-545c5f8d16ad?ixlib=rb-4.0.3&auto=format&fit=crop&w=1600&q=80") no-repeat center center / cover;
+  filter: brightness(0.83); 
+}
+
+
+.app-title {
+  font-size: 28px;
+  font-weight: bold;
+  color: #344265;
+  text-align: center;
+}
+.login-page h1 {
+}
+.login-form {
+  background: rgba(255, 255, 255, 0.85); 
+  backdrop-filter: blur(8px);            
+  padding: 50px;
+  border-radius: 16px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+  width: 420px;
+  transition: transform 0.3s ease;
+}
+
+.login-form h1 {
+  text-align: center;
+  font-weight: bold;
+  margin: 30px;
+  color: #344265;
+}
+
+.login-form .ant-form-item-label label {
+  color: #344265 !important;
+}
+.login-form button {
+  background-color: #344265;
+  color: white;
+  outline: none;
+}
+.login-form button:hover {
+  background-color: black;
+  color: white;
+}
+.login-form a {
+  color: #344265 !important;
+}
+
+.login-form a:hover {
+  color: black !important;
+}

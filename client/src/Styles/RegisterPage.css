@@ -1,0 +1,46 @@
+.register-page {
+ height: 100vh;
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+
+  background: url("https://images.unsplash.com/photo-1567427017947-545c5f8d16ad?ixlib=rb-4.0.3&auto=format&fit=crop&w=1600&q=80") no-repeat center center / cover;
+  filter: brightness(0.85); 
+}
+.register-form {
+  background: rgba(255, 255, 255, 0.85); 
+  backdrop-filter: blur(8px);            
+  padding: 50px;
+  border-radius: 16px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+  width: 420px;
+  transition: transform 0.3s ease;
+}
+
+.register-form h2 {
+  margin-top: 10px;
+  text-align: center;
+  font-weight: bold;
+  color: #b87333;
+}
+
+.register-form a {
+  color: #b87333 !important;
+}
+
+.register-form a:hover {
+  color: black !important;
+}
+
+.register-form button {
+  background-color: #b87333;
+  color: white;
+}
+
+.register-form input:focus {
+  border: 1px solid #b87333 !important;
+  color: #b87333;
+}

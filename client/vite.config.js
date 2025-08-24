@@ -13,5 +13,18 @@ export default defineConfig({
       },
     },
   },
+  build: {
+    rollupOptions: {
+      output: {
+        manualChunks: {
+          react: ['react', 'react-dom'],
+          antd: ['antd'],
+          moment: ['moment'],
+        },
+      },
+    },
+    chunkSizeWarningLimit: 600, // increase limit
+  },
 })
+
 
