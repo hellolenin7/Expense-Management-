@@ -3,7 +3,7 @@ import {Form, Input, message, Button} from 'antd';
 import {Link,useNavigate} from 'react-router-dom';
 import axios from 'axios';
 import Spinner from '../components/Spinner';
-import "../styles/RegisterPage.css";
+import "../Styles/RegisterPage.css";
 
 
 const Register= () => {

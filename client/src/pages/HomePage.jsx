@@ -20,7 +20,7 @@ const HomePage = () => {
   const [editable, setEditable] = useState(null);
 
   const [form] = Form.useForm(); // ✅ Ant Design form instance
-
+  const APIUrl = "https://expense-management-xjkt.onrender.com"
   // Table columns
   const columns = [
     {
@@ -56,7 +56,7 @@ const HomePage = () => {
       const user = JSON.parse(localStorage.getItem("user"));
       setLoading(true);
       const res = await axios.post(
-        "http://localhost:8080/api/v1/transactions/get-transaction",
+        `${APIUrl}/api/v1/transactions/get-transaction`,
         {
           userid: user._id,
           frequency,
@@ -83,7 +83,7 @@ const HomePage = () => {
   const handleDelete = async (record) => {
     try {
       setLoading(true);
-      await axios.post("http://localhost:8080/api/v1/transactions/delete-transaction", {
+      await axios.post(`${APIUrl}/api/v1/transactions/delete-transaction`, {
         transactionId: record._id,
       });
       setLoading(false);
@@ -116,14 +116,14 @@ const HomePage = () => {
 
       if (editable) {
         // Update
-        await axios.post("http://localhost:8080/api/v1/transactions/edit-transaction", {
+        await axios.post(`${APIUrl}/api/v1/transactions/edit-transaction`, {
           payload: { ...values, userId: user._id },
           transactionId: editable._id,
         });
         message.success("Transaction updated successfully");
       } else {
         // Add new
-        await axios.post("http://localhost:8080/api/v1/transactions/add-transaction", {
+        await axios.post(`${APIUrl}/api/v1/transactions/add-transaction`, {
           ...values,
           amount: Number(values.amount),
           userid: user._id,
