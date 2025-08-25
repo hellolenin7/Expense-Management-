@@ -7,13 +7,14 @@ import "../Styles/Loginpage.css";
 
 
 const Login= () => {
+  const APIUrl = "https://expense-management-xjkt.onrender.com"
     const [loading,setLoading] = useState(false);
     const navigate = useNavigate();
      //from submit
     const submitHandler = async (values) => {
   try {
     setLoading(true);
-    const { data } = await axios.post('/api/v1/users/login', values);
+    const { data } = await axios.post(`${APIUrl}/api/v1/users/login`, values);
     setLoading(false);
 
     if (data.success) {

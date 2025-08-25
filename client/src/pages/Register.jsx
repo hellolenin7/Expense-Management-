@@ -7,6 +7,7 @@ import "../Styles/RegisterPage.css";
 
 
 const Register= () => {
+    const APIUrl = "https://expense-management-xjkt.onrender.com"
     const navigate = useNavigate();
     const [loading,setLoading] = useState(false);
   
@@ -14,7 +15,7 @@ const Register= () => {
     const submitHandler = async (values) => {
      try {
     setLoading(true);
-    const { data } = await axios.post('/api/v1/users/register', values);
+    const { data } = await axios.post(`${APIUrl}/api/v1/users/register`, values);
     setLoading(false);
 
     if (data.success) {
