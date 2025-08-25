@@ -73,3 +73,35 @@ body, .ant-layout {
 .switch-icons .active-icon {
   color: #1890ff;
 }
+
+@media (max-width: 480px) {
+  .filters {
+    padding: 15px 18px;
+    margin: 15px 0;
+  }
+
+  .filters h6 {
+    font-size: 13px;
+  }
+
+  .filters .ant-select,
+  .filters .ant-picker,
+  .filters button {
+    width: 100%;
+    margin-top: 6px;
+  }
+
+  .switch-icons {
+    flex-direction: column;
+    gap: 12px;
+    padding: 10px 18px;
+  }
+
+  .switch-icons .anticon {
+    font-size: 20px;
+  }
+
+  body, .ant-layout {
+    font-size: 14px;
+  }
+}
