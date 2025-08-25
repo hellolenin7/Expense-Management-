@@ -3,7 +3,7 @@ import {Form,Input,message,Button} from 'antd';
 import {Link,useNavigate} from 'react-router-dom'
 import axios from 'axios'
 import Spinner from '../components/Spinner';
-import "../styles/Loginpage.css";
+import "../Styles/Loginpage.css";
 
 
 const Login= () => {
