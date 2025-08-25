@@ -1,7 +1,7 @@
 import React ,{useState,useEffect} from 'react'
 import { Link,useNavigate } from 'react-router-dom'
 import {message} from 'antd'
-import "../../styles/HeaderStyle.css";
+import "../../Styles/HeaderStyle.css";
 import { UserOutlined } from '@ant-design/icons';
 
 
